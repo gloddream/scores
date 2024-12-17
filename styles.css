@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* 标题样式 */
+h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 20px 0 12px;
+    text-align: left;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px 24px;
+}
+
+.search-container {
+    position: relative;
+    margin: 0 0 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-radius: 12px;
+    background: #fff;
+}
+
+#searchInput, #modalSearchInput {
+    width: 100%;
+    padding: 16px 120px 16px 20px;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+#searchInput:focus, #modalSearchInput:focus {
+    border-color: #666;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.05);
+}
+
+.clear-button {
+    position: absolute;
+    right: 90px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #666;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+.clear-button:hover {
+    opacity: 1;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+    background-color: rgba(255,255,255,0.98);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+}
+
+.back-button {
+    border: none;
+    background: none;
+    font-size: 16px;
+    color: #333;
+    padding: 8px 12px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.back-button:hover {
+    opacity: 1;
+}
+
+.modal-content {
+    padding: 20px 16px 32px;
+    overflow-y: auto;
+}
+
+.hot-search-title {
+    margin: 0;
+    padding: 16px 0 8px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.hot-searches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 16px 0;
+}
+
+.hot-search-item {
+    padding: 10px 18px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.hot-search-item:hover {
+    background-color: #e8e8e8;
+    border-color: #ddd;
+}
+
+.hot-search-item:active {
+    transform: scale(0.98);
+}
+
+.results-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.result-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border: 1px solid #eaeaea;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.result-item:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-color: #ccc;
+}
+
+.result-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2b6cb0;
+    margin-bottom: 8px;
+}
+
+.result-description {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+}
+
+.modal-search {
+    position: relative;
+    margin: 0 0 16px 0;
+    display: flex;
+    align-items: center;
+}
+
+#modalSearchInput {
+    flex: 1;
+    padding: 12px 120px 12px 16px;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+#modalSearchInput:focus {
+    border-color: #666;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.05);
+}
+
+.search-button {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 8px 16px;
+    background-color: #2b6cb0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.search-button:hover {
+    background-color: #2c5282;
+}
+
+.search-button:active {
+    transform: translateY(-50%) scale(0.98);
+} 

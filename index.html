@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>曲谱搜索</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>曲谱搜索</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="搜索曲谱..." autocomplete="off">
+            <button id="searchButton" class="search-button">搜索</button>
+            <button id="clearButton" class="clear-button" style="display: none;">×</button>
+        </div>
+
+        <div id="searchModal" class="modal">
+            <div class="modal-content">
+                <button class="back-button">返回</button>
+                <div class="modal-search">
+                    <input type="text" id="modalSearchInput" placeholder="搜索曲谱..." autocomplete="off">
+                    <button id="modalSearchButton" class="search-button">搜索</button>
+                    <button id="modalClearButton" class="clear-button" style="display: none;">×</button>
+                </div>
+                <h2 class="hot-search-title">热门搜索曲谱</h2>
+                <div id="hotSearches" class="hot-searches"></div>
+            </div>
+        </div>
+
+        <div id="resultsList" class="results-list"></div>
+    </div>
+
+    <script>
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            console.error('Error: ' + msg + '\nURL: ' + url + '\nLine: ' + lineNo + '\nColumn: ' + columnNo + '\nError object: ' + JSON.stringify(error));
+            alert('加载出错，请查看控制台');
+            return false;
+        };
+    </script>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
